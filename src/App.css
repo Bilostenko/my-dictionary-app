@@ -4,3 +4,10 @@
 
 :root {
 }
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-funky {
+    text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.6);
+  }

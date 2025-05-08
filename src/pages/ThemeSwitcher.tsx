@@ -1,38 +1,31 @@
-import { useState, useEffect } from "react";
-
+// import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState, AppDispatch } from "../app/store";
+import { toggleTheme } from "../features/toggleThemeSlice";
 const ThemeSwitcher = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    // Перевірка, чи має документ клас .dark
-    const isDark = document.documentElement.classList.contains("dark");
-    setIsDarkMode(isDark);
-  }, []);
-
-  const toggleTheme = () => {
-    const newDarkMode = !isDarkMode;
-    setIsDarkMode(newDarkMode);
-    document.documentElement.classList.toggle("dark", newDarkMode);
-    localStorage.setItem("darkMode", newDarkMode ? "true" : "false");
-  };
+  const dispatch = useDispatch<AppDispatch>();
+  const theme = useSelector((state: RootState) => state.app.theme);
+  const handleThemeToggle = () => {
+    dispatch(toggleTheme());
+  }
 
   return (
     <div className="flex items-center gap-3">
       <button
-        onClick={toggleTheme}
+        onClick={handleThemeToggle}
         className="relative w-10 h-5 rounded-full bg-gray-300 dark:bg-accent-purple transition-colors duration-300"
-        aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+        aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
       >
         <div 
           className={`absolute w-3.5 h-3.5 bg-white rounded-full top-[3px] transition-transform duration-300 ${
-            isDarkMode ? "translate-x-5 left-1" : "translate-x-0 left-1"
+            theme === "dark" ? "translate-x-5 left-1" : "translate-x-0 left-1"
           }`}
         />
       </button>
       <img
         src="./src/assets/icon-moon.svg"
         alt="Dark Mode"
-        className={`w-5 h-5 ${isDarkMode ? "opacity-100" : "opacity-70"}`}
+        className={`w-5 h-5 ${theme === "dark" ? "opacity-100" : "opacity-70"}`}
       />
     </div>
   );
