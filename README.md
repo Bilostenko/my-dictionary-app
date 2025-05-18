@@ -20,9 +20,9 @@ API https://api.dictionaryapi.dev/api/v2/entries/en/<word>
 
 Якщо слово є, приходить масив із даними
 
-Якщо нема — приходить { title: 'No Definitions Found', message: ..., resolution: ... }
+Якщо слова немає, то отримуємо помилку і пробуємо ввести заново
 
-Перевіряй Array.isArray(data) після запиту!
+Реалізовано Loader при завнтаженні
 
 Ідеї для фіч:
 

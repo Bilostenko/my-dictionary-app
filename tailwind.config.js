@@ -31,6 +31,15 @@ export default {
         "body-m": ["18px", "24px"],
         "body-s": ["14px", "17px"],
       },
+         animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+      },
     },
   },
   plugins: [],

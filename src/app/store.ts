@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import toggleTheme from '../features/toggleThemeSlice';
+import wordSlice from '../features/wordSlice';
 
 const store = configureStore({
   reducer: {
-    app: toggleTheme
+    app: toggleTheme,
+    word: wordSlice
   },
 });
 
