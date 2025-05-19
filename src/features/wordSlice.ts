@@ -23,10 +23,11 @@ const wordSlice = createSlice({
             state.loading = action.payload;
         },
         setError(state, action: PayloadAction<boolean>) {
+            state.wordData = [];
             state.error = action.payload;
         },
         resetWordData(state) {
-            state.wordData = null;
+            state.wordData = [];
             state.loading = false;
             state.error = false;
         },

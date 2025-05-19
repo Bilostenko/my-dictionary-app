@@ -1,6 +1,6 @@
 export interface Word {
     word: string;
-    phonetic?: string; // іноді може бути відсутнє
+    phonetic?: string; 
     phonetics: Phonetic[];
     origin?: string;
     meanings: Meaning[];
@@ -24,3 +24,8 @@ export interface Word {
     antonyms: string[];
   }
   
+ export interface Props {
+  hasInteracted: boolean;
+  error: boolean;
+  wordData: Word[] | null;
+}
