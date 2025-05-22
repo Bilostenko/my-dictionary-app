@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
-import { Phonetic, Props } from "../types/interfaceApi";
+import { Phonetic } from "../types/interfaceApi";
 import { RootState } from "../app/store";
 import { useState, useEffect } from "react";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import ErrorMessage from "../pages/ErrorMessage";
-const WordInfo: React.FC<Props> = () => {
+const WordInfo: React.FC = () => {
   const [delayedLoading, setDelayedLoading] = useState(true);
   const [hasInteracted, setHasInteracted] = useState(false);
   const { loading, error, wordData } = useSelector(
@@ -139,5 +139,3 @@ const WordInfo: React.FC<Props> = () => {
 };
 
 export default WordInfo;
-
-// ДОДАТИ ЗМІНУ ШРИФТУ

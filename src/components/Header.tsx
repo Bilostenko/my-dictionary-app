@@ -1,10 +1,15 @@
-import { useState } from "react";
 import ThemeSwitcher from "../pages/ThemeSwitcher";
+import { AppDispatch } from "../app/store";
+import { setFont } from "../features/fontSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../app/store";
 const Header = () => {
-  const [selectedFont, setSelectedFont] = useState("sans");
+ const selectedFont = useSelector((state: RootState) => state.font.selectedFont);
+  const dispatch = useDispatch<AppDispatch>();
 
-  const handleFont = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedFont(event.target.value);
+  const handleFont = (selectedFont: string) => {
+    dispatch(setFont(selectedFont));
+    localStorage.setItem('selectedFont', selectedFont);
   };
 
   return (
@@ -19,10 +24,10 @@ const Header = () => {
           <div className="relative">
             <select
               value={selectedFont}
-              onChange={handleFont}
+              onChange={(e) => {handleFont(e.target.value)}}
               className="dark:bg-dark-900 dark:text-white text-lg border-none block w-full px-9 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
             >
-              <option value="sans">SAN SERIF</option>
+              <option value="sans">SANS SERIF</option>
               <option value="serif">SERIF</option>
               <option value="mono">MONO</option>
             </select>
