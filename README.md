@@ -1,8 +1,12 @@
-Dictionary Explorer 📚 — React + TypeScript + Redux + Vite + TailwindCSS + REST API
+# Dictionary Explorer 📚 — React + TypeScript + Redux + Vite + TailwindCSS + REST API
+
 <a href="https://react.dev/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" /> </a> <a href="https://vitejs.dev/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" /> </a> <a href="https://redux.js.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/redux-colored.svg" width="36" height="36" alt="Redux" /> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="Tailwind CSS" /> </a>
+
+---
+
 This application is a stylish and responsive dictionary explorer built with a modern tech stack. Using data from the Free Dictionary API, users can search for English words, hear their pronunciation, and switch between themes and fonts for a personalized experience.
 
-✨ Features
+## ✨ Features
 🌗 Theme Toggle — Switch between Light and Dark modes.
 
 ✒ Font Selector — Choose between Sans Serif, Serif, or Monospace fonts.
@@ -15,7 +19,7 @@ This application is a stylish and responsive dictionary explorer built with a mo
 
 🔄 Loading State — Displays a loader while fetching data.
 
-🧰 Technologies Used
+## 🧰 Technologies Used
 React ^19.0.0
 
 TypeScript
@@ -29,6 +33,12 @@ React Redux ^9.2.0
 Tailwind CSS ^4.x
 
 Axios ^1.8.4
+
+## 🖼️ Screenshots
+
+Here’s a peek at the app:
+
+![App Screenshot](https://github.com/Bilostenko/my-dictionary-app/blob/main/localhost_5173_%20(2).png)
 
 🏛️ Project Structure
 graphql
