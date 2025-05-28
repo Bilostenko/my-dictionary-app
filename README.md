@@ -41,20 +41,18 @@ Here’s a peek at the app:
 ![App Screenshot](https://github.com/Bilostenko/my-dictionary-app/blob/main/localhost_5173_%20(2).png)
 
 🏛️ Project Structure
-graphql
-Копіювати
-Редагувати
 src/
 │
-├── api/               # Axios client and API requests
-├── app/               # Redux store setup
-├── components/        # UI components (Header, Search, WordCard, etc.)
-├── features/          # Redux slices
-├── pages/             # Pages (Home, NotFound, etc.)
-├── styles/           # Global styles (if needed)
-├── types/            # TypeScript interfaces and types
-├── utils/            # Helper functions
-└── main.tsx          # App entry point
+├── api/           # Axios client and API requests
+├── app/           # Redux store setup
+├── components/    # UI components (Header, Search, WordCard, etc.)
+├── features/      # Redux slices
+├── pages/         # Pages (Home, NotFound, etc.)
+├── styles/        # Global styles (if needed)
+├── types/         # TypeScript interfaces and types
+├── utils/         # Helper functions
+└── main.tsx       # App entry point
+
 🌐 API
 We use the Free Dictionary API:
 https://api.dictionaryapi.dev/api/v2/entries/en/<word>
