@@ -4,6 +4,7 @@ import { RootState } from "../app/store";
 import { useState, useEffect } from "react";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import ErrorMessage from "../pages/ErrorMessage";
+import play from "../assets/icon-play.svg";
 const WordInfo: React.FC = () => {
   const [delayedLoading, setDelayedLoading] = useState(true);
   const [hasInteracted, setHasInteracted] = useState(false);
@@ -55,7 +56,7 @@ const WordInfo: React.FC = () => {
             <div >
               {audioObj?.audio ? (
                 <button onClick={() => playAudio()}>
-                  <img src="./src/assets/icon-play.svg" alt="play" className="hover:brightness-125"/>
+                  <img src={play} alt="play" className="hover:brightness-125"/>
                 </button>
               ) : (
                 <p className="text-accent-purple text-xl font-bold">Sorry, no sound for this word</p>
