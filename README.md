@@ -1,37 +1,55 @@
+Dictionary Explorer 📚 — React + TypeScript + Redux + Vite + TailwindCSS + REST API
+<a href="https://react.dev/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="36" height="36" alt="TypeScript" /> </a> <a href="https://vitejs.dev/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vite-colored.svg" width="36" height="36" alt="Vite" /> </a> <a href="https://redux.js.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/redux-colored.svg" width="36" height="36" alt="Redux" /> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="36" height="36" alt="Tailwind CSS" /> </a>
+This application is a stylish and responsive dictionary explorer built with a modern tech stack. Using data from the Free Dictionary API, users can search for English words, hear their pronunciation, and switch between themes and fonts for a personalized experience.
 
-1. перемикання теми світла або темна
-2. вибір шрифту Сан шеріф, Шеріф, Моно
-3. Пошук слова. Якщо слово є, приходить масив із даними.
-Якщо нема — приходить { title: 'No Definitions Found', message: ..., resolution: ... }
+✨ Features
+🌗 Theme Toggle — Switch between Light and Dark modes.
 
+✒ Font Selector — Choose between Sans Serif, Serif, or Monospace fonts.
+
+🔍 Word Search — Enter an English word and get detailed definitions, phonetics, and usage.
+
+🔈 Audio Pronunciation — Play audio to hear the correct pronunciation.
+
+💬 Error Handling — If the word is not found, get a clear message.
+
+🔄 Loading State — Displays a loader while fetching data.
+
+🧰 Technologies Used
+React ^19.0.0
+
+TypeScript
+
+Vite
+
+Redux Toolkit ^2.6.1
+
+React Redux ^9.2.0
+
+Tailwind CSS ^4.x
+
+Axios ^1.8.4
+
+🏛️ Project Structure
+graphql
+Копіювати
+Редагувати
 src/
 │
-├── api/               # Axios запити та клієнт
-├── app/               # store.ts і redux setup
-├── components/        # UI компоненти (наприклад, Header, Search, WordCard)
-├── features/          # Redux slice-и по фічах
-├── pages/             # Сторінки (наприклад, Home, NotFound)
-├── styles/            # Глобальні стилі (якщо треба)
-├── types/             # Типи TypeScript, якщо API складне
-├── utils/             # Хелпери, форматери тощо
-└── main.tsx
+├── api/               # Axios client and API requests
+├── app/               # Redux store setup
+├── components/        # UI components (Header, Search, WordCard, etc.)
+├── features/          # Redux slices
+├── pages/             # Pages (Home, NotFound, etc.)
+├── styles/           # Global styles (if needed)
+├── types/            # TypeScript interfaces and types
+├── utils/            # Helper functions
+└── main.tsx          # App entry point
+🌐 API
+We use the Free Dictionary API:
+https://api.dictionaryapi.dev/api/v2/entries/en/<word>
 
-API https://api.dictionaryapi.dev/api/v2/entries/en/<word>
+✅ If the word exists → Returns an array with definitions.
+❌ If the word doesn't exist → Returns an error with:
 
-Якщо слово є, приходить масив із даними
 
-Якщо слова немає, то отримуємо помилку і пробуємо ввести заново
-
-Реалізовано Loader при завнтаженні
-
-Ідеї для фіч:
-
-🔍 Пошук з debounce (щоб не спамити API)
-
-📜 Темна/світла тема (Tailwind дає з коробки)
-
-💾 Історія пошуків (localStorage)
-
-🔈 Кнопка для прослуховування вимови (API дає посилання на аудіо!)
-
-📚 Фільтрація по частині мови (noun, verb…)
