@@ -2,6 +2,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../app/store";
 import { toggleTheme } from "../features/toggleThemeSlice";
+import moon from "../assets/icon-moon.svg";
 const ThemeSwitcher = () => {
   const dispatch = useDispatch<AppDispatch>();
   const theme = useSelector((state: RootState) => state.app.theme);
@@ -23,7 +24,7 @@ const ThemeSwitcher = () => {
         />
       </button>
       <img
-        src="./src/assets/icon-moon.svg"
+        src={moon}
         alt="Dark Mode"
         className={`w-5 h-5 ${theme === "dark" ? "opacity-100" : "opacity-70"}`}
       />

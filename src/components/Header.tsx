@@ -3,6 +3,8 @@ import { AppDispatch } from "../app/store";
 import { setFont } from "../features/fontSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../app/store";
+import logo from "../assets/logo.svg";
+import arrow from "../assets/icon-arrow-down.svg";
 const Header = () => {
  const selectedFont = useSelector((state: RootState) => state.font.selectedFont);
   const dispatch = useDispatch<AppDispatch>();
@@ -16,7 +18,7 @@ const Header = () => {
     <div className="">
       <div className="flex justify-between items-center p-4">
         <div>
-          <img src="./src/assets/logo.svg" alt="logo" />
+          <img src={logo} alt="logo" />
         </div>
 
         {/* Селектор шрифтів */}
@@ -32,7 +34,7 @@ const Header = () => {
               <option value="mono">MONO</option>
             </select>
             <img
-              src="./src/assets/icon-arrow-down.svg"
+              src={arrow}
               alt="arrow"
               className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 pointer-events-none"
             />

@@ -3,6 +3,7 @@ import { AppDispatch } from "../app/store";
 import { useDispatch } from "react-redux";
 import { fetchWord } from "../API/api";
 import { setWordData, setLoading, setError } from "../features/wordSlice";
+import search from "../assets/icon-search.svg";
 
 const SearchField: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -52,7 +53,7 @@ const SearchField: React.FC = () => {
         onClick={() => handleSearch(searchValue)}
         className="text-white font-bold py-4 px-4 rounded-md"
       >
-        <img src="./src/assets/icon-search.svg" alt="icon" className="w-10 hover:brightness-125"/>
+        <img src={search} alt="icon" className="w-10 hover:brightness-125"/>
       </button>
     </div>
   );
