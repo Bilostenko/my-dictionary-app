@@ -25,7 +25,7 @@ const Header = () => {
             <select
               value={selectedFont}
               onChange={(e) => {handleFont(e.target.value)}}
-              className="dark:bg-dark-900 dark:text-white text-lg border-none block w-full px-9 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
+              className="focus:shadow-[0_0_20px_rgba(168,85,247,0.7)] dark:bg-dark-900 dark:text-white text-lg border-none block w-full px-9 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
             >
               <option value="sans">SANS SERIF</option>
               <option value="serif">SERIF</option>

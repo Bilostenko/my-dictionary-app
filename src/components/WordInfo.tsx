@@ -52,10 +52,10 @@ const WordInfo: React.FC = () => {
             <h1 className="text-dark-700 dark:text-white text-6xl font-bold text-shadow-funky">
               {wordData?.[0].word}
             </h1>
-            <div>
+            <div >
               {audioObj?.audio ? (
                 <button onClick={() => playAudio()}>
-                  <img src="./src/assets/icon-play.svg" alt="play" />
+                  <img src="./src/assets/icon-play.svg" alt="play" className="hover:brightness-125"/>
                 </button>
               ) : (
                 <p className="text-accent-purple text-xl font-bold">Sorry, no sound for this word</p>
@@ -86,7 +86,7 @@ const WordInfo: React.FC = () => {
           </div>
           {wordData?.[0].meanings[0].synonyms.length > 0 && (
             <>
-              <div className="max-w-3xl">
+              <div className="max-w-3xl flex items-center gap-20 py-10">
                 <h2 className="text-2xl text-dark-500 dark:text-white mb-2">
                   Synonyms
                 </h2>
